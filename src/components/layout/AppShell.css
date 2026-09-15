@@ -1,0 +1,224 @@
+.app-shell {
+  display: flex;
+  min-height: 100svh;
+}
+
+.app-sidebar {
+  width: var(--sidebar-width);
+  flex-shrink: 0;
+  background: var(--color-surface);
+  border-inline-start: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  padding: 22px 18px;
+  gap: 22px;
+  position: sticky;
+  top: 0;
+  height: 100svh;
+}
+
+.app-sidebar-brand {
+  display: flex;
+  flex-direction: column;
+  padding: 0 4px;
+}
+
+.app-sidebar-logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-primary-700);
+}
+
+.app-sidebar-tagline {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+}
+
+.app-sidebar-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-primary-50);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+}
+
+.app-sidebar-child-name {
+  font-weight: 700;
+  font-size: 14.5px;
+  color: var(--color-text);
+}
+
+.app-sidebar-child-meta {
+  font-size: 12.5px;
+  color: var(--color-text-secondary);
+}
+
+.app-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.app-sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 12px;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  font-size: 14.5px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.app-sidebar-link:hover {
+  background: var(--color-surface-alt);
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.app-sidebar-link.is-active {
+  background: var(--color-primary-50);
+  color: var(--color-primary-700);
+}
+
+.app-sidebar-logout {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 12px;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  font-size: 14.5px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.app-sidebar-logout:hover {
+  background: var(--color-danger-bg);
+  color: var(--color-danger-text);
+}
+
+.app-shell-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-topbar {
+  height: var(--header-height);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.app-topbar-account {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.app-topbar-account-text {
+  text-align: end;
+}
+
+.app-topbar-account-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.app-topbar-account-role {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.app-topbar-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--color-primary-700);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.app-content {
+  flex: 1;
+  padding: 28px;
+  max-width: var(--content-max-width);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.app-shell-mobile-toggle {
+  display: none;
+  position: fixed;
+  top: 14px;
+  inset-inline-start: 14px;
+  z-index: 55;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border-strong);
+  background: var(--color-surface);
+  color: var(--color-text);
+  align-items: center;
+  justify-content: center;
+}
+
+.app-shell-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 30, 32, 0.4);
+  z-index: 44;
+}
+
+@media (max-width: 900px) {
+  .app-shell-mobile-toggle {
+    display: flex;
+  }
+
+  .app-sidebar {
+    position: fixed;
+    inset-block: 0;
+    inset-inline-start: 0;
+    z-index: 50;
+    transform: translateX(100%);
+    transition: transform 0.2s ease;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .app-sidebar.is-open {
+    transform: translateX(0);
+  }
+
+  .app-topbar {
+    padding-inline-start: 64px;
+  }
+
+  .app-content {
+    padding: 20px 16px 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-topbar-account-text {
+    display: none;
+  }
+}

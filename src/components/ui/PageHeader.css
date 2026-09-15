@@ -1,0 +1,26 @@
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.page-header h1 {
+  margin-bottom: 4px;
+}
+
+.page-header-subtitle {
+  color: var(--color-text-secondary);
+  font-size: 15px;
+  margin: 0;
+  max-width: 60ch;
+}
+
+.page-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}

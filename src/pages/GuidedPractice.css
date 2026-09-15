@@ -1,0 +1,89 @@
+.practice-tip-banner {
+  background: var(--color-amber-pale);
+  color: #6b4e00;
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.practice-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.practice-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.practice-card-number {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--color-primary-700);
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.practice-card-header h2 {
+  margin-bottom: 2px;
+}
+
+.practice-card-goal {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  margin: 0;
+}
+
+.practice-card-duration {
+  margin-inline-start: auto;
+  flex-shrink: 0;
+}
+
+.practice-materials {
+  background: var(--color-surface-alt);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 13.5px;
+  margin-bottom: 16px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.practice-materials-label {
+  font-weight: 700;
+  color: var(--color-text);
+  flex-shrink: 0;
+}
+
+.practice-steps {
+  margin: 0 0 16px;
+  padding-inline-start: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.practice-steps li {
+  color: var(--color-text);
+  line-height: 1.8;
+}
+
+.practice-tip {
+  background: var(--color-primary-50);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  font-size: 13.5px;
+  color: var(--color-primary-900);
+  line-height: 1.8;
+}

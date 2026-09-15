@@ -1,0 +1,146 @@
+.auth-screen {
+  min-height: 100svh;
+  display: flex;
+}
+
+.auth-panel-brand {
+  flex: 1;
+  background: linear-gradient(155deg, var(--color-primary-700), var(--color-primary-500));
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 56px;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-panel-brand::before,
+.auth-panel-brand::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.auth-panel-brand::before {
+  width: 320px;
+  height: 320px;
+  inset-inline-end: -100px;
+  inset-block-start: -100px;
+}
+
+.auth-panel-brand::after {
+  width: 220px;
+  height: 220px;
+  inset-inline-start: -60px;
+  inset-block-end: -60px;
+}
+
+.auth-brand-logo {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.auth-brand-heading {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  max-width: 22ch;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.auth-brand-copy {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 15px;
+  max-width: 40ch;
+  margin-bottom: 28px;
+  position: relative;
+}
+
+.auth-brand-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+}
+
+.auth-brand-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14.5px;
+  color: #fff;
+}
+
+.auth-brand-list-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.auth-panel-form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  background: var(--color-bg);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-card-mobile-logo {
+  display: none;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-primary-700);
+  margin-bottom: 24px;
+}
+
+.auth-card h1 {
+  margin-bottom: 6px;
+}
+
+.auth-card-subtitle {
+  color: var(--color-text-secondary);
+  margin-bottom: 28px;
+}
+
+.auth-divider {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.auth-footnote {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 900px) {
+  .auth-panel-brand {
+    display: none;
+  }
+
+  .auth-card-mobile-logo {
+    display: block;
+  }
+}

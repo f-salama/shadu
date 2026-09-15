@@ -1,0 +1,71 @@
+.chart-canvas {
+  width: 100%;
+}
+
+.chart-tooltip {
+  background: var(--color-text);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-family: var(--font-sans);
+  direction: rtl;
+  text-align: right;
+  box-shadow: var(--shadow-md);
+}
+
+.chart-tooltip-date {
+  color: #cfd8da;
+  margin-bottom: 2px;
+}
+
+.chart-tooltip-value {
+  font-weight: 700;
+}
+
+.error-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.error-breakdown-row-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.error-breakdown-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.error-breakdown-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.error-breakdown-count {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.error-breakdown-track {
+  height: 10px;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-alt);
+  overflow: hidden;
+}
+
+.error-breakdown-fill {
+  height: 100%;
+  border-radius: var(--radius-pill);
+  transition: width 0.4s ease;
+}
